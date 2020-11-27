@@ -1,0 +1,97 @@
+@font-face {
+    font-family: 'VT323';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/vt323/v12/pxiKyp0ihIEF2isfFJA.ttf) format('truetype');
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    background-image: url('images/bg2.jpg');
+    background-size: cover;
+    color: #07dd12;
+    font-family: 'VT323';
+    font-size: 24px;
+    -webkit-font-smoothing: none;
+    line-height: 1.2;
+  }
+  
+  section{
+      display: flex;
+      justify-content: center;
+  }
+  h1 {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+  p {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+  }
+  
+  .piece {
+    display: block;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 100%;
+    
+  }
+  
+  .frame {
+    box-shadow: inset 0 0 18rem black,
+      inset 0 0 3rem black,
+      0 0 10rem black;
+    width: 600px;
+    margin-top: 5%;
+    pointer-events: none;
+  }
+  
+  .output {
+    -webkit-animation: crt-output 10ms infinite;
+            animation: crt-output 10ms infinite;
+    background-color: #031e11;
+    padding: 3rem 2rem;
+    pointer-events: auto;
+    text-shadow: 0rem 0.2rem 1rem #0c7b46;
+    z-index: -1;
+    
+  }
+  
+  .peace,
+  .output{
+      box-shadow: 0 0 2rem 0.2rem rgba(2, 255, 44, 0.5);
+  }
+  @-webkit-keyframes crt-output {
+    0% {
+      opacity: 0.9;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  @keyframes crt-output {
+    0% {
+      opacity: 0.9;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+  .scanlines {
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(70%, rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.6)));
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.2) 70%, rgba(0, 0, 0, 0.6));
+    background-size: 100% 0.3rem;
+    position: absolute;
+  }
+  .glow {
+    -webkit-animation: crt-glow 60s infinite;
+            animation: crt-glow 60s infinite;
+    background: radial-gradient(circle at center, #1bd459 0%, rgba(27, 212, 89, 0.88) 58%, rgba(21, 235, 92, 0.57) 80%, rgba(19, 94, 29, 0.27) 93%, rgba(10, 23, 12, 0) 100%);
+    opacity: 0.15;
+    pointer-events: none;
+    position: fixed;
+  }
+  
